@@ -17,21 +17,30 @@ class BusinessesViewController: UIViewController, UITableViewDataSource, UITable
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        
+         searchDisplayController?.displaysSearchBarInNavigationBar = true
+        
+        
+        
+        
         mytableview.delegate = self
         mytableview.dataSource = self
-        mytableview.rowHeight = 110
-
+        //mytableview.rowHeight = 110
+        mytableview.rowHeight = UITableViewAutomaticDimension
+        mytableview.estimatedRowHeight = 120
+        
         Business.searchWithTerm(term: "Thai", completion: { (businesses: [Business]?, error: Error?) -> Void in
             
+              if let businesses = businesses {
                 self.businesses = businesses
-                self.mytableview.reloadData()
-                if let businesses = businesses {
+                
+              
                     for business in businesses {
                         print(business.name!)
                         print(business.address!)
                     }
                 }
-            
+            self.mytableview.reloadData()
             }
         )
         
@@ -64,10 +73,12 @@ class BusinessesViewController: UIViewController, UITableViewDataSource, UITable
         let cell =
             tableView.dequeueReusableCell(withIdentifier: "BusinessCell", for: indexPath) as! BusinessCell
         
-        cell.business = businesses [indexPath.row]
+        cell.business = businesses[indexPath.row]
         
         return cell
     }
+    
+    
     
     }
     /*

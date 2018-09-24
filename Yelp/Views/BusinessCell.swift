@@ -9,19 +9,13 @@
 import UIKit
 
 class BusinessCell: UITableViewCell {
-
+    
     @IBOutlet weak var thumbnview: UIImageView!
-    
     @IBOutlet weak var namelabel: UILabel!
-    
     @IBOutlet weak var distancelabel: UILabel!
-    
     @IBOutlet weak var reviewscountlabel: UILabel!
-    
     @IBOutlet weak var ratingimageview: UIImageView!
-    
     @IBOutlet weak var addressLabel: UILabel!
-    
     @IBOutlet weak var catalabel: UILabel!
     
     var business: Business! {
@@ -41,8 +35,17 @@ class BusinessCell: UITableViewCell {
         // Initialization code
         thumbnview.layer.cornerRadius = 3
         thumbnview.clipsToBounds = true
+        
+        namelabel.preferredMaxLayoutWidth = namelabel.frame.size.width
     }
 
+    
+    override func layoutSubviews() {
+        super.layoutSubviews()
+        
+        namelabel.preferredMaxLayoutWidth = namelabel.frame.size.width
+        
+    }
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
 

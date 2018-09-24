@@ -12,7 +12,7 @@ import AFNetworking
 import BDBOAuth1Manager
 
 // You can register for Yelp API keys here: https://www.yelp.com/developers/v3/manage_app
-let yelpAPIKey = "https://api.yelp.com/v3/autocomplete"
+let yelpAPIKey = "izCFqEx0usiPwAiv_ymJ4Sl2Lr_mpnN6U_VeEkn1iUyEUWLM2Rd76A6NlswCI-HlYVWYT2WYRFtNnD04lgageyBKPJkqDDA75C8UsJYwc7oXWMGDFSCRU93zoTBaW3Yx"
 
 enum YelpSortMode: String {
     case best_match, rating, review_count, distance
