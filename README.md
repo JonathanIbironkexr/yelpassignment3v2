@@ -39,9 +39,11 @@ GIF created with [LiceCap](http://www.cockos.com/licecap/).
 
 Describe any challenges encountered while building the app.
 
+-My API key was wrong and thus I had no content in my storyboard even though the code was correct. 
+-Following video instruction and video update instruction doesn't convey the needed importance in small steps that may be overlooked. For example, absentmindedly clicking and unclicking options in video without a cue can go unnoticed.
 ## License
 
-Copyright [yyyy] [name of copyright owner]
+Copyright [2018] [name of copyright owner]
 
 Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.
